@@ -1,11 +1,16 @@
 import Form from "./Form";
+import Tasks from "./Tasks";
+
+
 const tasks = [
   {
     content: "przeniesc liste do reacta",
+    done: false,
     id: 1,
   },
   {
     content: "zjeść obiad",
+    done: true,
     id: 2,
   },
 ];
@@ -27,7 +32,7 @@ function App() {
           <h2 className="section__header">Lista zadań</h2>
           <div className="section__headerButtons"></div>
         </div>
-        <ul className="tasksList"></ul>
+        <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
       </section>
     </main>
   );
