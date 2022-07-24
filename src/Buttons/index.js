@@ -1,6 +1,5 @@
 import "./style.css";
 
-
 const Buttons = ({ tasks, hideDoneTasks }) => {
     <div className="section__headerButtons">
         {tasks.length > 0 && (
@@ -17,7 +16,6 @@ const Buttons = ({ tasks, hideDoneTasks }) => {
         )}
     </div>
 };
-
 
 export default Buttons;
 

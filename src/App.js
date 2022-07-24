@@ -5,17 +5,16 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-
 const tasks = [
   {
     content: "przeniesc liste do reacta",
     done: false,
-    id: 1,
+    id: 0,
   },
   {
     content: "zjeść obiad",
     done: true,
-    id: 2,
+    id: 1,
   },
 ];
 
