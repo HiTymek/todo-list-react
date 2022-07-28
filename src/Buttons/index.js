@@ -1,12 +1,15 @@
 import "./style.css";
 
-const Buttons = ({ tasks, hideDoneTasks }) => {
+const Buttons = ({ tasks, hideDone, toggleHideDone }) => {
     return (
         <div className="section__headerButtons">
             {tasks.length > 0 && (
                 <>
-                    <button className="section__headerButton">
-                        {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+                    <button
+                        className="section__headerButton"
+                        onClick={toggleHideDone}
+                    >
+                        {hideDone ? "Pokaż" : "Ukryj"} ukończone
                     </button>
                     <button
                         className="section__headerButton"
@@ -15,9 +18,10 @@ const Buttons = ({ tasks, hideDoneTasks }) => {
                         Ukończ wszystkie
                     </button>
                 </>
-            )}
-        </div>
-    )
+            )
+            }
+        </div >
+    );
 };
 
 export default Buttons;
