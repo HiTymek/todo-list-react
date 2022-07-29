@@ -36,7 +36,9 @@ function App() {
   }
 
   const addNewTask = (newTaskContent) => {
-    setTasks(tasks => [
+    if (newTaskContent === "") {
+      return;
+    } return setTasks(tasks => [
       ...tasks,
       {
         content: newTaskContent,
