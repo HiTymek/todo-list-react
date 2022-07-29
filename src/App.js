@@ -8,18 +8,7 @@ import { useState } from 'react';
 
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      content: "Dodać interakcje do listy zadań",
-      done: false,
-      id: 1,
-    },
-    {
-      content: "zjeść obiad",
-      done: true,
-      id: 2,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const [hideDone, setHideDone] = useState(false);
 
@@ -47,12 +36,24 @@ function App() {
     })));
   }
 
+  const addNewTask = (newTaskContent) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        content: newTaskContent,
+        done: false,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+      }
+    ])
+  };
+
+
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form />}
+        body={<Form addNewTask={addNewTask} />}
       />
       <Section
         title="Lista zadań"
