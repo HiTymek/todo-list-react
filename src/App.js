@@ -14,11 +14,11 @@ function App() {
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
-  }
+  };
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
-  }
+  };
 
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
@@ -26,19 +26,17 @@ function App() {
         return { ...task, done: !task.done }
       } return task;
     }));
-  }
+  };
 
   const setAllDone = () => {
     setTasks(tasks => tasks.map(task => ({
       ...task,
       done: true,
     })));
-  }
+  };
 
   const addNewTask = (newTaskContent) => {
-    if (newTaskContent === "") {
-      return;
-    } return setTasks(tasks => [
+    setTasks(tasks => [
       ...tasks,
       {
         content: newTaskContent,
@@ -46,7 +44,7 @@ function App() {
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1
       }
     ]);
-  }
+  };
 
   return (
     <Container>
@@ -62,6 +60,6 @@ function App() {
       />
     </Container>
   );
-}
+};
 
 export default App;
