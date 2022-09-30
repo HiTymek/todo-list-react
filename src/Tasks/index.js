@@ -19,7 +19,7 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
                     🗑
                 </Button>
             </Item>
-        ))};
+        ))}
     </List >
 );
 
