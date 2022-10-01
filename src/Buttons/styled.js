@@ -22,7 +22,7 @@ export const Button = styled.button`
     }
 
     &:disabled{
-        color: #999;
+        color: ${({ theme }) => theme.colors.dustyGray};
         cursor: auto;
     }
 `;

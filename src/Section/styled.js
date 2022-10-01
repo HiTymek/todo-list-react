@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const StyledSection = styled.section`
     background-color: white;
     margin: 10px 20px;
-    box-shadow: 0px 1px 3px 1px #ddd;
+    box-shadow: 0px 1px 3px 1px ${({ theme }) => theme.colors.alto};
 `;
 
 export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #eee;
+    border-bottom: 3px solid ${({ theme }) => theme.colors.alto};
 `;
 
 export const Header = styled.h2`

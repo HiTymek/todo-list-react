@@ -14,19 +14,19 @@ export const StyledForm = styled.form`
 
 export const Input = styled.input`
     padding: 10px;
-    border: 2px solid hsl(0, 0%, 85%);
+    border: 2px solid ${({ theme }) => theme.colors.alto};
 `;
 
 export const Button = styled.button`
     padding: 10px;
     font-size: 16px;
     letter-spacing: 1px;
-    background-color: teal;
-    color: white;
+    background-color: ${({ theme }) => theme.colors.teal};
+    color: ${({ theme }) => theme.colors.white};
     border: none;
 
     &:hover{
-        background-color: hsl(180, 100%, 15%);
+        background-color: ${({ theme }) => theme.colors.sherpaBlue};
         transform: scale(1.05);
         transition-duration: 0.5s;
         cursor: pointer;

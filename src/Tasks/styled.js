@@ -13,7 +13,7 @@ export const Item = styled.li`
     align-items: center;
     grid-template-columns: auto 1fr auto;
     padding: 20px 0 20px 0;
-    border-bottom: 2px solid hsl(0, 0%, 85%);
+    border-bottom: 2px solid ${({ theme }) => theme.colors.alto};
 
     ${({ hidden }) => hidden && css`
         display:none;
@@ -28,8 +28,8 @@ export const Content = styled.span`
 
 export const Button = styled.button`
     font-size: 17px;
-    color: white;
-    background-color: green;
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.green};
     width: 40px;
     height: 40px;
     justify-self: center;
@@ -38,17 +38,17 @@ export const Button = styled.button`
     margin-right: 15px;
 
     &:hover {
-        background-color: hsl(120, 100%, 15%);
+        background-color: ${({ theme }) => theme.colors.crusoe};
         transition-duration: 0.5s;
     }
 
     ${({ remove }) => remove && css`
-        background-color: red;
+        background-color: ${({ theme }) => theme.colors.red};
         margin-left: 15px;
         margin-right: 0;
 
         &:hover {
-            background-color: hsl(0, 100%, 40%);
+            background-color: ${({ theme }) => theme.colors.guardsmanRed};
             transition-duration: 0.5s;
         }
     `};
