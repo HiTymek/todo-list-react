@@ -10,14 +10,11 @@ const Form = ({ addNewTask }) => {
         } else {
             addNewTask(newTaskContent.trim());
             setNewTaskContent("");
+            inputRef.current.focus();
         };
     };
 
     const inputRef = useRef(null);
-
-    const setFocus = () => {
-        inputRef.current.focus();
-    };
 
     useEffect(() => {
         inputRef.current.focus();
@@ -34,7 +31,7 @@ const Form = ({ addNewTask }) => {
                 value={newTaskContent}
                 onChange={(event) => setNewTaskContent(event.target.value)}
             />
-            <Button onClick={setFocus}>Dodaj zadanie</Button>
+            <Button>Dodaj zadanie</Button>
         </StyledForm>
     );
 };
