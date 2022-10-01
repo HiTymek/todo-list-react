@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { StyledForm, Input, Button } from "./styled";
 
 const Form = ({ addNewTask }) => {
@@ -18,6 +18,10 @@ const Form = ({ addNewTask }) => {
     const setFocus = () => {
         inputRef.current.focus();
     };
+
+    useEffect(() => {
+        inputRef.current.focus();
+    }, []);
 
     const [newTaskContent, setNewTaskContent] = useState("");
 
