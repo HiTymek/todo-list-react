@@ -9,5 +9,8 @@ export const theme = {
         sherpaBlue: "#004d4d",
         crusoe: "#004d00",
         dustyGray: "#999999",
-    }
+    },
+    breakpoints: {
+        mobile: 767,
+    },
 };
