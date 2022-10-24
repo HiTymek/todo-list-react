@@ -14,15 +14,16 @@ const Form = () => {
         event.preventDefault();
         if (newTaskContent.trim() === "") {
             return;
-        } else {
-            dispatch(addTask({
-                content: newTaskContent,
-                done: false,
-                id: nanoid(),
-            }));
-            setNewTaskContent("");
-            inputRef.current.focus();
-        };
+        }
+
+        dispatch(addTask({
+            content: newTaskContent,
+            done: false,
+            id: nanoid(),
+        }));
+
+        setNewTaskContent("");
+        inputRef.current.focus();
     };
 
     useEffect(() => {
