@@ -13,7 +13,7 @@ export const Button = styled.button`
     border: none;
     font-size: 18px;
     background-color: transparent;
-    padding: 20px;
+    padding: 10px;
 
     &:hover{
         color: hsl(180, 100%, 35%);
