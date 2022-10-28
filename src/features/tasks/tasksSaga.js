@@ -14,7 +14,7 @@ function* fetchExampleTasksHendler() {
 
 function* saveTasksInLocalStorageHandler() {
     const tasks = yield select(selectTasks);
-    yield call(saveTasksInLocalStorage, tasks)
+    yield call(saveTasksInLocalStorage, tasks);
 };
 
 export default function* tasksSaga() {
