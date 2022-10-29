@@ -1,15 +1,17 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { StyledHeaderButton } from "../StyledHeaderButton/styled";
-import { fetchExampleTasks } from "../../tasksSlice";
+import { fetchExampleTasks, selectIsLoading } from "../../tasksSlice";
 
 const ExtraButton = () => {
+    const isLoading = useSelector(selectIsLoading);
     const dispatch = useDispatch();
 
     return (
         <StyledHeaderButton
             onClick={() => dispatch(fetchExampleTasks())}
+            disabled={isLoading}
         >
-            Pobierz przykładowe zadania
+            {isLoading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
         </StyledHeaderButton>
     );
 };
