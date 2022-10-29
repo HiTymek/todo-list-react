@@ -1,4 +1,5 @@
-import { HeaderSection, Button } from "./styled";
+import { HeaderSection } from "./styled";
+import { StyledHeaderButton } from "../StyledHeaderButton/styled";
 import { useSelector, useDispatch } from "react-redux";
 import {
     toggleHideDone,
@@ -6,7 +7,6 @@ import {
     selectHideDone,
     selectIsEveryTaskDone,
     selectAreTasksListEmpty,
-    fetchExampleTasks,
 } from "../../tasksSlice";
 
 const Buttons = () => {
@@ -17,24 +17,19 @@ const Buttons = () => {
 
     return (
         <HeaderSection>
-            <Button
-                onClick={() => dispatch(fetchExampleTasks())}
-            >
-                Pobierz przykładowe zadania
-            </Button>
             {!areTasksListEmpty && (
                 <>
-                    <Button
+                    <StyledHeaderButton
                         onClick={() => { dispatch(toggleHideDone()) }}
                     >
                         {hideDone ? "Pokaż" : "Ukryj"} ukończone
-                    </Button>
-                    <Button
+                    </StyledHeaderButton>
+                    <StyledHeaderButton
                         disabled={isEveryTaskDone}
                         onClick={() => { dispatch(setAllDone()) }}
                     >
                         Ukończ wszystkie
-                    </Button>
+                    </StyledHeaderButton>
                 </>
             )
             }

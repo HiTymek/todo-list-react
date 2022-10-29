@@ -6,6 +6,7 @@ import Header from "../../../common/Header";
 import { Container } from "../../../common/Container/styled";
 import { ContentContainer } from "../../author/styled";
 import Search from "./Search";
+import ExtraButton from "./ExtraButton";
 
 const TasksPage = () => {
   return (
@@ -14,21 +15,22 @@ const TasksPage = () => {
       <Section
         title="Dodaj nowe zadanie"
         body={<Form />}
+        extraHeaderContent={<ExtraButton />}
       />
-      <Section
+      < Section
         title="Wyszukiwarka"
         body={
-          <ContentContainer>
+          < ContentContainer >
             <Search />
-          </ContentContainer>
+          </ContentContainer >
         }
       />
-      <Section
+      < Section
         title="Lista zadań"
-        body={<TaskList />}
-        extraHeaderContent={<Buttons />}
+        body={< TaskList />}
+        extraHeaderContent={< Buttons />}
       />
-    </Container>
+    </Container >
   );
 };
 
