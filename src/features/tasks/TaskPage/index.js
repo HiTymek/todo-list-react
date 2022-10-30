@@ -17,11 +17,16 @@ const TaskPage = () => {
             <Container>
                 <Header title="Szczegóły zadania" />
                 <Section
-                    title={task ? task.content : "Nie znaleziono zadania 😥"}
+                    title={task ? task.content : "Ups coś poszło nie tak 😥"}
                     body={
-                        <ContentContainer>
-                            <strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}
-                        </ContentContainer>
+                        task ?
+                            <ContentContainer>
+                                <strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}
+                            </ContentContainer>
+                            :
+                            <ContentContainer>
+                                <strong>Nie znaleziono zadania o takim ID</strong>
+                            </ContentContainer>
                     }
                 />
             </Container>
