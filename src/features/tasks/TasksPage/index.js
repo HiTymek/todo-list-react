@@ -7,30 +7,34 @@ import { Container } from "../../../common/Container/styled";
 import { ContentContainer } from "../../author/styled";
 import Search from "./Search";
 import ExtraButton from "./ExtraButton";
+import Navigation from "../../../common/Navigation";
 
 const TasksPage = () => {
   return (
-    <Container>
-      <Header title="Lista zadań" />
-      <Section
-        title="Dodaj nowe zadanie"
-        body={<Form />}
-        extraHeaderContent={<ExtraButton />}
-      />
-      < Section
-        title="Wyszukiwarka"
-        body={
-          < ContentContainer >
-            <Search />
-          </ContentContainer >
-        }
-      />
-      < Section
-        title="Lista zadań"
-        body={< TaskList />}
-        extraHeaderContent={< Buttons />}
-      />
-    </Container >
+    <>
+      <Navigation />
+      <Container>
+        <Header title="Lista zadań" />
+        <Section
+          title="Dodaj nowe zadanie"
+          body={<Form />}
+          extraHeaderContent={<ExtraButton />}
+        />
+        < Section
+          title="Wyszukiwarka"
+          body={
+            < ContentContainer >
+              <Search />
+            </ContentContainer >
+          }
+        />
+        < Section
+          title="Lista zadań"
+          body={< TaskList />}
+          extraHeaderContent={< Buttons />}
+        />
+      </Container >
+    </>
   );
 };
 
