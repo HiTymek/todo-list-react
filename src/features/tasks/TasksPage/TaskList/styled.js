@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
     display: flex;
@@ -26,6 +27,15 @@ export const Content = styled.span`
     `}
 `;
 
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.teal};
+
+    :hover{
+        filter: brightness(120%);
+    }
+`;
+
 export const Button = styled.button`
     font-size: 17px;
     color: ${({ theme }) => theme.colors.white};
@@ -36,6 +46,7 @@ export const Button = styled.button`
     border: none;
     cursor: pointer;
     margin-right: 15px;
+    text-align: center;
 
     &:hover {
         background-color: ${({ theme }) => theme.colors.crusoe};
