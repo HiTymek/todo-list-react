@@ -4,6 +4,7 @@ import { getTasksFromLocalStorage } from "./tasksLocalStorage";
 const initialState = {
     tasks: getTasksFromLocalStorage(),
     hideDone: false,
+    loading: false,
 };
 
 const tasksSlice = createSlice({
