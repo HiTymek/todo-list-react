@@ -1,20 +1,49 @@
-# TODO LIST in React.js 📜
+# 📜 To Do List - Lista zadań 
 
-## Description 📖
-This is a simple TODO LIST created with react technology.
-In this app you can add your tasks which you have to do and then mark them as done or delete your tasks when they are done.
+This is a To Do List project.
 
-## Preview 👓
+This project was bootstrapped with Create React App.
 
-![GIF how to use this app](/src/todolistreacthowtouse.gif)
-## Demo 🔨
+## 🔨 Demo 
+***
 
-Do you wanna add some yours tasks? 
-Click [Here!](https://hitymek.github.io/todo-list-react/) and DO IT!
+Do you wanna add some new tasks?\
+Let's try [Here!](https://hitymek.github.io/todo-list-react/)
+## 📖 Description 
+***
+In this app you can:
+- add a new task
+- remove a task
+- mark task as done
+- set all tasks as done
+- hide tasks which are done
+- download a example tasks 
+- **NEW!** Now, you can search your task using a search engine.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Every changes in your tasks are save in local storage using a Redux - Saga.
 
-## Available Scripts
+## 👓 Preview
+***
+
+![GIF how to use this app](/src/preview.gif)
+
+## 👩🏻‍💻 Technologies:
+***
+- HTML
+- CSS (grid, flex, media-queries)
+- Styled - Components
+- JavaScript ES6 + features
+- React Hooks
+- React Redux
+- Redux Saga
+- Redux Toolkit
+- React Router
+- Markdown 
+- Create React App
+
+
+## 📌 Available Scripts
+***
 
 In the project directory, you can run:
 
