@@ -5,12 +5,12 @@ This is a To Do List project.
 This project was bootstrapped with Create React App.
 
 ## 🔨 Demo 
-***
+
 
 Do you wanna add some new tasks?\
 Let's try [Here!](https://hitymek.github.io/todo-list-react/)
 ## 📖 Description 
-***
+
 In this app you can:
 - add a new task
 - remove a task
@@ -23,12 +23,11 @@ In this app you can:
 Every changes in your tasks are save in local storage using a Redux - Saga.
 
 ## 👓 Preview
-***
 
 ![GIF how to use this app](/src/preview.gif)
 
 ## 👩🏻‍💻 Technologies:
-***
+
 - HTML
 - CSS (grid, flex, media-queries)
 - Styled - Components
