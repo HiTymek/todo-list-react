@@ -14,7 +14,7 @@ const AuthorPage = () => (
                         <strong>Moją największą pasją są motocykle 😍 </strong>
                         Od bardzo dawna marzę aby spełnić swoje największe marzenie i kupić swój pierwszy motocykl!
                         Uwielbiam oglądać wyścigi motocyklowe takie jak MOTO GP albo TT. Interesuje się każdymi nowinkami jeśli chodzi o nie.
-                        W przyszłym roku mam nadziję, że skończę robić prawo jazdy. I kupię swoją pierwszą maszynę 🥰.
+                        W przyszłym roku mam nadzieję, że skończę robić prawo jazdy. I kupię swoją pierwszą maszynę 🥰.
                     </p>
                     <p>
                         Także do zobaczenia w przyszłym roku na drogach. <strong>Lewa w górę ✋🏻.</strong>
